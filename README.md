@@ -1,1 +1,1 @@
-[Notes_251003_233927.pdf](https://github.com/user-attachments/files/22711295/Notes_251003_233927.pdf)
+Here I am trying to build a programable platform to STMM. When considering more about meta surfaces (here you can find more details about meta structures by refering the note that written by me)[Notes_251003_233927.pdf](https://github.com/user-attachments/files/22711295/Notes_251003_233927.pdf) 

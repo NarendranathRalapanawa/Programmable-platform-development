@@ -27,14 +27,10 @@ This adds a time dimension, letting you do crazy things like frequency shifting 
 
 🔹 3. Why code a simulation first?
 
-Before building actual hardware, researchers make numerical simulations of how waves interact with programmable metasurfaces. This lets you test different designs.
+Before building actual hardware, I made numerical simulations of how waves interact with programmable metasurfaces. 
 
-So, the little code I gave you is like a toy simulator:
+I defined a metasurface modulation pattern (how the surface changes with space and time).
 
-We create an incident wave (like shining a plane wave).
+I multiplied them → meaning the surface applies its modulation to the wave.
 
-We define a metasurface modulation pattern (how the surface changes with space and time).
-
-We multiply them → meaning the surface applies its modulation to the wave.
-
-Then we visualize what happens.
+Then I visualized what happens.

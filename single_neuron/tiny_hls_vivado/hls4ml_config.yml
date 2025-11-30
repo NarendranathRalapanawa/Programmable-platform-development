@@ -1,0 +1,31 @@
+Backend: Vivado
+ClockPeriod: 5
+ClockUncertainty: 12.5%
+HLSConfig:
+  Model:
+    BitExact: null
+    BramFactor: 1000000000
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_parallel
+InputData: null
+InputShapes:
+  dense_input:
+  - 2
+KerasModel: !keras_model 'tiny_hls_vivado/keras_model.keras'
+OutputDir: tiny_hls_vivado
+OutputPredictions: null
+OutputShapes:
+  layer4_out:
+  - 1
+Part: xcvu13p-flga2577-2-e
+ProjectName: myproject
+Stamp: 538da967
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  TBOutputStream: both
+  WriteTar: false
+  WriteWeightsTxt: true

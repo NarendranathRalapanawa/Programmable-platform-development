@@ -1,0 +1,32 @@
+Backend: Vitis
+ClockPeriod: 5
+ClockUncertainty: 27%
+HLSConfig:
+  Model:
+    BitExact: null
+    BramFactor: 1000000000
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_parallel
+InputData: null
+InputShapes:
+  dense_input:
+  - 2
+KerasModel: !keras_model 'tiny_hls_prj/keras_model.keras'
+OutputDir: tiny_hls_prj
+OutputPredictions: null
+OutputShapes:
+  layer4_out:
+  - 1
+Part: xcvu13p-flga2577-2-e
+ProjectName: myproject
+Stamp: d0f10bbf
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  TBOutputStream: both
+  WriteEmulationConstants: false
+  WriteTar: false
+  WriteWeightsTxt: true

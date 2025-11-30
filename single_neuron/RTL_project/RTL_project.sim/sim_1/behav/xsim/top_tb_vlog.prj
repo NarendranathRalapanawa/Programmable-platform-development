@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../RTL_project.srcs/sources_1/new/dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config2_0_0.v" \
+"../../../../RTL_project.srcs/sources_1/new/myproject.v" \
+"../../../../RTL_project.srcs/sources_1/new/nn_top.v" \
+"../../../../RTL_project.srcs/sources_1/new/relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config4_s.v" \
+"../../../../RTL_project.srcs/sources_1/new/top.v" \
+"../../../../RTL_project.srcs/sources_1/new/uart_stubs.v" \
+"../../../../RTL_project.srcs/sources_1/new/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

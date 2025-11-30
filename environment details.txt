@@ -1,0 +1,8 @@
+the environments are 
+
+source hls4ml-env/bin/activate
+
+for vitis 
+source /tools/Xilinx/Vivado/2019.2/settings64.sh
+vivado_hls -version
+

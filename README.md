@@ -25,7 +25,7 @@ This README documents where things stand right now.
 Single Neuron Inference on Nexys A7 (hls4ml → Vivado → UART)
 # Single Neuron on Nexys A7 (hls4ml → Vivado → UART)
 
-This week I implemented a **single-neuron neural network** on a **Digilent Nexys A7-100T** FPGA and wired it up to a PC over **USB-UART**.
+## This week I implemented a **single-neuron neural network** on a **Digilent Nexys A7-100T** FPGA and wired it up to a PC over **USB-UART**.
 
 The goal:
 

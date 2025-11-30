@@ -36,7 +36,7 @@ The goal:
 
 ---
 
-## 2. Repository Overview
+## 1. Repository Overview
 
 ```text
 single_neuron/
@@ -92,5 +92,34 @@ module nn_top (
     output [15:0] y_V
 );
 ```
+## 3. FPGA Top-Level Design (`top.v`)
 
+To connect the neural network core to the **Nexys A7** and the PC, a custom top module is used.
+
+---
+
+### 3.1 Top-Level Ports
+
+```verilog
+module top (
+    input  wire CLK100MHZ,   // board clock
+    input  wire btn0,        // reset button
+    input  wire uart_txd_in, // PC -> FPGA
+    output wire uart_rxd_out // FPGA -> PC
+);
+```
+
+These ports map to the Nexys A7 XDC constraints:
+
+* CLK100MHZ → pin E3
+*btn0 → pin N17
+*uart_txd_in → pin C4 (PC TX → FPGA RX)
+*uart_rxd_out → pin D4 (FPGA TX → PC RX)
+
+###3.2 Clock & Reset
+```verilog
+wire clk = CLK100MHZ;
+wire rst = btn0; // active-high reset
+
+```
 

@@ -36,7 +36,7 @@ The goal:
 
 ---
 
-## 1. Repository Overview
+## 2. Repository Overview
 
 ```text
 single_neuron/
@@ -47,3 +47,46 @@ single_neuron/
 ├─ vivado_hls.log       # HLS log
 ├─ serial_com.py        # Python UART script (PC side)
 └─ README.md            # This file
+```
+##3. Neural Network & HLS Flow
+3.1 Model
+
+Inputs: 2 (x0, x1)
+
+Core: Single dense layer → ReLU
+
+Output: 1 neuron (y)
+
+Datatype: Fixed-point (ap_fixed via hls4ml)
+
+The model is:
+
+Trained in Keras
+
+Saved as tiny_nn.h5
+
+The script single_neuron.py:
+
+Loads the Keras model.
+
+Configures fixed-point precision.
+
+Generates a Vivado HLS project in tiny_hls_prj/ using hls4ml.
+
+3.2 HLS-Generated RTL
+
+Vivado HLS 2019.2 produces several Verilog modules, including:
+
+myproject.v
+
+Top HLS block implementing the NN.
+
+dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config2_0_0.v
+
+Dense layer arithmetic in fixed-point.
+
+relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config4_s.v
+
+ReLU activation.
+
+A small wrapper nn_top.v is used as the NN core interface:
